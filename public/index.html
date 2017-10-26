@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-</head>
-<body>
-  <h1>Node Test</h1>
-  <p>you made it login here</p>
-  <form name="login-form" method="post" action="/login">
-    <label for="user">Username</label>
-    <input type="text" id="user" name="username" required="true">
-    <label for="password">password</label>
-    <input type="password" id="password"name="password" required="true">
-    <input type="submit" value="Login">
-  </form>
-
-</body>
+<html>
+  <body>
+     
+     <form action = "http://127.0.0.1:8081/process_get" method = "GET">
+        First Name: <input type = "text" name = "first_name">  <br>
+        Last Name: <input type = "text" name = "last_name">
+        <input type = "submit" value = "Submit">
+     </form>
+     
+  </body>
 </html>
