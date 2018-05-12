@@ -17,7 +17,7 @@ dbConnString = data
 var db
 MongoClient.connect(dbConnString, (err, client) => {
   if (err) return console.log(err)
-  db = client.db('ahmadstestdatabase')
+  db = client.db('ahmadtestdatabase')
   app.listen(3000, function() {
     console.log('listening on 3000')
   })  
@@ -29,5 +29,10 @@ app.get('/', (req, res) => {
 })
 
 app.post('/quotes', (req,res) => {
-  console.log(req.body)
+  db.collection('quotes').save(req.body, (err, result) => {
+    if (err) return console.log(err)
+
+    console.log('saved to database')
+    res.redirect('/')
+  })
 })
