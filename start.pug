@@ -14,3 +14,9 @@ html(lang="en")
       p.
         Pug is a terse and simple templating language with a
         strong focus on performance and powerful features.
+      form(method="POST" action="/quotes")
+        label(for="name") Name: 
+        input(type='text', placeholder='name' name='name')
+        label(for="quote" ) Quote: 
+        input(type='text', placeholder='quote' name='quote')
+        button(type="submit") Submit
