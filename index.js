@@ -2,13 +2,17 @@ const pug = require('pug')
 const bodyParser = require('body-parser')
 const app = require('express')()
 const fs = require('fs')
-
 const MongoClient = require('mongodb').MongoClient
+
+var dbConnString
 
 app.use(bodyParser.urlencoded({extended: true}))
 
 // renderFile
 var html = pug.renderFile('start.pug');
+
+var data = fs.readFileSync('./sensitive/dbconnection', 'utf8') 
+dbConnString = data
 
 var db
 MongoClient.connect(dbConnString, (err, client) => {
