@@ -1,0 +1,1 @@
+global.newglobal = 22222;
