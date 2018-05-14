@@ -10,3 +10,13 @@ console.log('--EXACT EQUALITY--')
 console.log("5 == '5':", 5 == '5'); // true
 console.log("5 === '5':",5 === '5'); // false
 
+// Are these all falsy?
+if (!false) {
+  console.log('falsy');
+  }
+  if (!null) {
+  console.log('falsy');
+  }
+  if (!undefined) {
+  console.log('falsy');
+  }
